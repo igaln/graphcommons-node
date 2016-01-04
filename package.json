@@ -1,0 +1,30 @@
+{
+  "name": "graphcommons",
+  "version": "0.1.0",
+  "description": "Node JS Wrapper For Graph Commons API",
+  "main": "index.js",
+  "dependencies": {
+    "unirest": "^0.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igaln/graphcommons-node.git"
+  },
+  "keywords": [
+    "graphcommons",
+    "node",
+    "graph",
+    "api",
+    "maps"
+  ],
+  "author": "igal nassima <inassima@gmail.com> (igal.is)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igaln/graphcommons-node/issues"
+  },
+  "homepage": "https://github.com/igaln/graphcommons-node#readme"
+}
