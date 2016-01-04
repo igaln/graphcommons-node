@@ -1,6 +1,6 @@
 {
   "name": "graphcommons",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Node JS Wrapper For Graph Commons API",
   "main": "index.js",
   "dependencies": {
