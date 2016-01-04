@@ -31,7 +31,7 @@ var log = function(result) {
 }
 
 var apiready = function(result) {
-
+		console.log('api ready:', result);
 		//var g1 = graphcommons.graphs('f71116ba-cf77-4703-826a-daac2ab2f085');
 		//graphcommons.update_graph('f71116ba-cf77-4703-826a-daac2ab2f085', signals,log);
 		//var n1 = graphcommons.nodes('bd26bf55-a88f-bc15-bd65-33240593a53c',log);
