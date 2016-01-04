@@ -26,16 +26,16 @@ var graph = {
     };
 
 
-var log = function(result) {
+var callback = function(result) {
 	console.log('log:', result);
 }
 
 var apiready = function(result) {
 		console.log('api ready:', result);
-		//var g1 = graphcommons.graphs('f71116ba-cf77-4703-826a-daac2ab2f085');
-		//graphcommons.update_graph('f71116ba-cf77-4703-826a-daac2ab2f085', signals,log);
-		//var n1 = graphcommons.nodes('bd26bf55-a88f-bc15-bd65-33240593a53c',log);
-		//var g2 = graphcommons.new_graph(graph,log);
+		graphcommons.graphs('f71116ba-cf77-4703-826a-daac2ab2f085',callback);
+		//graphcommons.update_graph('f71116ba-cf77-4703-826a-daac2ab2f085', signals,callback);
+		graphcommons.nodes('bd26bf55-a88f-bc15-bd65-33240593a53c',callback);
+		//graphcommons.new_graph(graph,callback);
 }
 
 
