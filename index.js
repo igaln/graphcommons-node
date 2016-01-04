@@ -72,14 +72,15 @@ GraphCommons.prototype.update_graph = function(_id, _signals, _callback) {
 
 //Utility
 
-var sendSignal = function(_id,_signals) {
+var sendSignal = function(_id,_signals,_callback) {
 	
 	unirest.put(api_url + 'graphs/' + _id + '/add')
 		.headers({'Authentication': api_key})
 		.headers({'Content-Type' : 'application/json'})
 		.send(_signals)
 		.end(function (response) {
-		  console.log(response.body);
+		  //console.log(response.body);
+		  if(_callback) _callback(response.body);
 		});
 }
 
