@@ -19,7 +19,7 @@ More detailed API documentation:
 	console.log('log:', result);
  }
 
- > var graphcommons = new graphcommons(accesskey, callback);
+ > var graphcommons = new gc(accesskey, callback);
  
  log: { msg: 'Working' }
 
