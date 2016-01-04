@@ -13,8 +13,7 @@ More detailed API documentation:
 ```javascript
 
  > var gc = require('graphcommons');
-
- > var accesskey = var accesskey = process.env.YOURENVIRONMENTACCESSKEYWHICHYOUSHOULDNOTSTOREINYOURCODE;
+ > var accesskey = process.env.YOURENVIRONMENTACCESSKEYWHICHYOUSHOULDNOTSTOREINYOURCODE;
 
  > var callback = function(result) {
 	console.log('log:', result);
@@ -30,13 +29,13 @@ More detailed API documentation:
 
 ```javascript
 
-> var graphcallback = function(graph) {
+> var callback = function(graph) {
     console.log('log:', graph);
     console.log('edges: ', graph.edges);
     console.log('nodes: ', graph.nodes);
  }
 
-> graphcommons.graphs('f71116ba-cf77-4703-826a-daac2ab2f085',graphcallback);
+> graphcommons.graphs('f71116ba-cf77-4703-826a-daac2ab2f085',callback);
 
 ```
 
@@ -58,13 +57,13 @@ var signals = { "signals" : [
                 ]
             };
 
-> var graphcallback = function(graph) {
+> var callback = function(graph) {
     console.log('log:', graph);
     console.log('edges: ', graph.edges);
     console.log('nodes: ', graph.nodes);
  }
 
-> graphcommons.update_graph('f71116ba-cf77-4703-826a-daac2ab2f085',signals,graphcallback);
+> graphcommons.update_graph('f71116ba-cf77-4703-826a-daac2ab2f085',signals,callback);
 ```
 
 ###TODO
