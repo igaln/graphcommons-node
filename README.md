@@ -39,6 +39,20 @@ More detailed API documentation:
 
 ```
 
+### Get graph
+
+```javascript
+
+> var callback = function(graph) {
+    console.log('log:', graph);
+    console.log('edges: ', graph.edges);
+    console.log('nodes: ', graph.nodes);
+ }
+
+> graphcommons.graphs('f71116ba-cf77-4703-826a-daac2ab2f085',callback);
+
+```
+
 ### Update Graph
 
 ```javascript
@@ -66,9 +80,15 @@ var signals = { "signals" : [
 > graphcommons.update_graph('f71116ba-cf77-4703-826a-daac2ab2f085',signals,callback);
 ```
 
+### Search Nodes
+  need to add documentation, see test.js for now
+
+### Search Graph Commons
+  need to add documentation, see test.js for now
+
 ###TODO
 
-- [ ] Graph Utility Functions
+- [x] Graph Utility Functions
 - [ ] Add Mocha for tests
 - [ ] Better wrapper for Signals? 
 
