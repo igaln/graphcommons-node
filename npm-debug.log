@@ -1,98 +1,27 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'version', 'patch' ]
 2 info using npm@2.14.9
 3 info using node@v0.12.8
 4 verbose node symlink /usr/local/bin/node
-5 verbose publish [ '.' ]
-6 silly cache add args [ '.', null ]
-7 verbose cache add spec .
-8 silly cache add parsed spec { raw: '.',
-8 silly cache add   scope: null,
-8 silly cache add   name: null,
-8 silly cache add   rawSpec: '.',
-8 silly cache add   spec: '/Users/igal/Development/_FINETUNES/_GRAPH',
-8 silly cache add   type: 'directory' }
-9 verbose addLocalDirectory /Users/igal/.npm/graphcommons/0.1.4/package.tgz not in flight; packing
-10 verbose tar pack [ '/Users/igal/.npm/graphcommons/0.1.4/package.tgz',
-10 verbose tar pack   '/Users/igal/Development/_FINETUNES/_GRAPH' ]
-11 verbose tarball /Users/igal/.npm/graphcommons/0.1.4/package.tgz
-12 verbose folder /Users/igal/Development/_FINETUNES/_GRAPH
-13 info prepublish graphcommons@0.1.4
-14 verbose addLocalTarball adding from inside cache /Users/igal/.npm/graphcommons/0.1.4/package.tgz
-15 silly cache afterAdd graphcommons@0.1.4
-16 verbose afterAdd /Users/igal/.npm/graphcommons/0.1.4/package/package.json not in flight; writing
-17 verbose afterAdd /Users/igal/.npm/graphcommons/0.1.4/package/package.json written
-18 silly publish { name: 'graphcommons',
-18 silly publish   version: '0.1.4',
-18 silly publish   description: 'Node JS Wrapper For Graph Commons API',
-18 silly publish   main: 'index.js',
-18 silly publish   dependencies: { unirest: '^0.4.2' },
-18 silly publish   devDependencies: {},
-18 silly publish   scripts: { test: 'node test.js' },
-18 silly publish   repository:
-18 silly publish    { type: 'git',
-18 silly publish      url: 'git+https://github.com/igaln/graphcommons-node.git' },
-18 silly publish   keywords: [ 'graphcommons', 'node', 'graph', 'api', 'maps' ],
-18 silly publish   author:
-18 silly publish    { name: 'igal nassima',
-18 silly publish      email: 'inassima@gmail.com',
-18 silly publish      url: 'igal.is' },
-18 silly publish   license: 'MIT',
-18 silly publish   bugs: { url: 'https://github.com/igaln/graphcommons-node/issues' },
-18 silly publish   homepage: 'https://github.com/igaln/graphcommons-node#readme',
-18 silly publish   readme: '### Node.js Wrapper For Graph Commons API.\n\nMore detailed API documentation:\n\n<http://graphcommons.github.io/api-v1/>\n\n### Installation\n\n npm install graphcommons\n\n### Usage\n\n```javascript\n\n > var gc = require(\'graphcommons\');\n > var accesskey = process.env.YOURENVIRONMENTACCESSKEYWHICHYOUSHOULDNOTSTOREINYOURCODE;\n\n > var callback = function(result) {\n\tconsole.log(\'log:\', result);\n }\n\n > var graphcommons = new gc(accesskey, callback);\n \n log: { msg: \'Working\' }\n\n ```\n\n### Get graph\n\n```javascript\n\n> var callback = function(graph) {\n    console.log(\'log:\', graph);\n    console.log(\'edges: \', graph.edges);\n    console.log(\'nodes: \', graph.nodes);\n }\n\n> graphcommons.graphs(\'f71116ba-cf77-4703-826a-daac2ab2f085\',callback);\n\n```\n\n### Get graph\n\n```javascript\n\n> var callback = function(graph) {\n    console.log(\'log:\', graph);\n    console.log(\'edges: \', graph.edges);\n    console.log(\'nodes: \', graph.nodes);\n }\n\n> graphcommons.graphs(\'f71116ba-cf77-4703-826a-daac2ab2f085\',callback);\n\n```\n\n### Update Graph\n\n```javascript\n\nvar signals = { "signals" : [\n                    {\n                      "action": "node_create",\n                      "type": "NodeType",\n                      "name": "NodeName",\n                      "description": "test description",\n                      "properties": {\n                            "prop1": "one",\n                            "prop2": 2\n                        }\n                    }\n                ]\n            };\n\n> var callback = function(graph) {\n    console.log(\'log:\', graph);\n    console.log(\'edges: \', graph.edges);\n    console.log(\'nodes: \', graph.nodes);\n }\n\n> graphcommons.update_graph(\'f71116ba-cf77-4703-826a-daac2ab2f085\',signals,callback);\n```\n\n### Search Nodes\n  need to add documentation, see test.js for now\n\n### Search Graph Commons\n  need to add documentation, see test.js for now\n\n###TODO\n\n- [x] Graph Utility Functions\n- [ ] Add Mocha for tests\n- [ ] Better wrapper for Signals? \n\n',
-18 silly publish   readmeFilename: 'README.md',
-18 silly publish   gitHead: '60830f85c8b138e068e35e6022614c99d80f49d8',
-18 silly publish   _id: 'graphcommons@0.1.4',
-18 silly publish   _shasum: 'ab6953c59d728b6c83b8d81243af203682429b7f',
-18 silly publish   _from: '.' }
-19 verbose getPublishConfig undefined
-20 silly mapToRegistry name graphcommons
-21 silly mapToRegistry using default registry
-22 silly mapToRegistry registry https://registry.npmjs.org/
-23 silly mapToRegistry uri https://registry.npmjs.org/graphcommons
-24 verbose publish registryBase https://registry.npmjs.org/
-25 silly publish uploading /Users/igal/.npm/graphcommons/0.1.4/package.tgz
-26 verbose request uri https://registry.npmjs.org/graphcommons
-27 verbose request sending authorization for write operation
-28 info attempt registry request try #1 at 17:17:28
-29 verbose request using bearer token for auth
-30 verbose request id f3ec6458d8730393
-31 http request PUT https://registry.npmjs.org/graphcommons
-32 http 403 https://registry.npmjs.org/graphcommons
-33 verbose headers { 'content-type': 'application/json',
-33 verbose headers   'cache-control': 'max-age=300',
-33 verbose headers   'content-length': '95',
-33 verbose headers   'accept-ranges': 'bytes',
-33 verbose headers   date: 'Wed, 06 Jan 2016 22:17:27 GMT',
-33 verbose headers   via: '1.1 varnish',
-33 verbose headers   connection: 'keep-alive',
-33 verbose headers   'x-served-by': 'cache-iad2138-IAD',
-33 verbose headers   'x-cache': 'MISS',
-33 verbose headers   'x-cache-hits': '0',
-33 verbose headers   'x-timer': 'S1452118646.537999,VS0,VE1010' }
-34 verbose request invalidating /Users/igal/.npm/registry.npmjs.org/graphcommons on PUT
-35 error publish Failed PUT 403
-36 verbose stack Error: "You cannot publish over the previously published version 0.1.4." : graphcommons
-36 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
-36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
-36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
-36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
-36 verbose stack     at Request.emit (events.js:110:17)
-36 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1082:10)
-36 verbose stack     at Request.emit (events.js:129:20)
-36 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
-36 verbose stack     at IncomingMessage.emit (events.js:129:20)
-36 verbose stack     at _stream_readable.js:908:16
-37 verbose statusCode 403
-38 verbose pkgid graphcommons
-39 verbose cwd /Users/igal/Development/_FINETUNES/_GRAPH
-40 error Darwin 14.5.0
-41 error argv "node" "/usr/local/bin/npm" "publish"
-42 error node v0.12.8
-43 error npm  v2.14.9
-44 error code E403
-45 error "You cannot publish over the previously published version 0.1.4." : graphcommons
-46 error If you need help, you may report this error at:
-46 error     <https://github.com/npm/npm/issues>
-47 verbose exit [ 1, true ]
+5 info git [ 'status', '--porcelain' ]
+6 verbose stack Error: Git working directory not clean.
+6 verbose stack M npm-debug.log
+6 verbose stack M package.json
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:171:21
+6 verbose stack     at ChildProcess.exithandler (child_process.js:742:7)
+6 verbose stack     at ChildProcess.emit (events.js:110:17)
+6 verbose stack     at maybeClose (child_process.js:1016:16)
+6 verbose stack     at Socket.<anonymous> (child_process.js:1184:11)
+6 verbose stack     at Socket.emit (events.js:107:17)
+6 verbose stack     at Pipe.close (net.js:484:11)
+7 verbose cwd /Users/igal/Development/_FINETUNES/_GRAPH
+8 error Darwin 14.5.0
+9 error argv "node" "/usr/local/bin/npm" "version" "patch"
+10 error node v0.12.8
+11 error npm  v2.14.9
+12 error Git working directory not clean.
+12 error M npm-debug.log
+12 error M package.json
+13 error If you need help, you may report this error at:
+13 error     <https://github.com/npm/npm/issues>
+14 verbose exit [ 1, true ]
