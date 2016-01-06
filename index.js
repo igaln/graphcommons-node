@@ -63,6 +63,36 @@ GraphCommons.prototype.nodes = function(_id, _callback) {
 	});
 }
 
+// Search nodes in graphs
+// Returns the search results in nodes
+GraphCommons.prototype.nodes_search = function(_search_obj, _callback) {
+
+	if(!_search_obj) throw new Error('missing search query for the node search');
+	
+	unirest.get(api_url + 'nodes/search')
+	.headers({'Authentication': api_key})
+	.headers({'Content-Type' : 'application/json'})
+	.send(_search_obj)
+	.end(function (response) {
+ 		if(_callback) _callback(response.body);
+	});
+}
+
+// Search nodes in graphs
+// Returns the search results in nodes
+GraphCommons.prototype.nodes_search = function(_search_obj, _callback) {
+
+	if(!_search_obj) throw new Error('missing search query for the node search');
+	
+	unirest.get(api_url + 'search')
+	.headers({'Authentication': api_key})
+	.headers({'Content-Type' : 'application/json'})
+	.send(_search_obj)
+	.end(function (response) {
+ 		if(_callback) _callback(response.body);
+	});
+}
+
 
 // Update graph with signals
 GraphCommons.prototype.update_graph = function(_id, _signals, _callback) {
@@ -71,7 +101,6 @@ GraphCommons.prototype.update_graph = function(_id, _signals, _callback) {
 }
 
 //Utility
-
 var sendSignal = function(_id,_signals,_callback) {
 	
 	unirest.put(api_url + 'graphs/' + _id + '/add')
@@ -79,7 +108,6 @@ var sendSignal = function(_id,_signals,_callback) {
 		.headers({'Content-Type' : 'application/json'})
 		.send(_signals)
 		.end(function (response) {
-		  //console.log(response.body);
 		  if(_callback) _callback(response.body);
 		});
 }
