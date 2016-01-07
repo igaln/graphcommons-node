@@ -52,7 +52,7 @@ var callback = function(result) {
 }
 
 var graphedges = function(graph) {
-//	console.log('log:', graph);
+	console.log('log:', graph);
 	console.log('-------');
 	var node = graph.get_node('ce66a18f-be3a-c55e-b6b9-4fcab7116541');		
 	//console.log(node);
@@ -74,7 +74,7 @@ var apiready = function(result) {
 		//graphcommons.nodes('bd26bf55-a88f-bc15-bd65-33240593a53c',callback);
 		//graphcommons.new_graph(graph,callback);
 		//graphcommons.nodes_search(search_query,searchresults);
-		graphcommons.nodes_search(search_query,searchresults);
+		//graphcommons.search(search_query,searchresults);
 }
 
 

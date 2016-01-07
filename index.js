@@ -50,7 +50,7 @@ GraphCommons.prototype.graphs = function(_id, _callback) {
 	});
 }
 
-// Retrieve a graph from api
+// Retrieve a nodes from graph
 // Returns the node object
 GraphCommons.prototype.nodes = function(_id, _callback) {
 
@@ -80,7 +80,7 @@ GraphCommons.prototype.nodes_search = function(_search_obj, _callback) {
 
 // Search nodes in graphs
 // Returns the search results in nodes
-GraphCommons.prototype.nodes_search = function(_search_obj, _callback) {
+GraphCommons.prototype.search = function(_search_obj, _callback) {
 
 	if(!_search_obj) throw new Error('missing search query for the node search');
 	
