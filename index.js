@@ -50,7 +50,7 @@ GraphCommons.prototype.graphs = function(_id, _callback) {
 	});
 }
 
-// Retrieve a nodes from graph
+// Retrieve particular node and all of its properties
 // Returns the node object
 GraphCommons.prototype.nodes = function(_id, _callback) {
 
