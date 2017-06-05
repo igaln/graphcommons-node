@@ -50,11 +50,11 @@ GraphCommons.prototype.graphs = function(_id, _callback) {
 	});
 }
 
-// Retrieve a nodes from graph
+// Retrieve particular node and all of its properties
 // Returns the node object
 GraphCommons.prototype.nodes = function(_id, _callback) {
 
-	if(!_id) throw new Error('missing id for the graph');
+	if(!_id) throw new Error('missing id for the node');
 	
 	unirest.get(api_url + 'nodes/' + _id)
 	.headers({'Authentication': api_key})
