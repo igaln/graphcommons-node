@@ -63,7 +63,7 @@ suite('graphcommons', () => {
     });
   })
 
-  setup('#graphs method', () => {
+  suite('#graphs method', () => {
 
     test('should throw an error if id is absent', () => {
       assert.throws(() => { gc.graphs() }, Error, 'missing id for the graph');
