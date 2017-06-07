@@ -1,0 +1,116 @@
+{
+  "graph": {
+    "id": "69ecbcbd-d409-468b-af5a-10453275e423",
+    "name": "Test",
+    "subtitle": "",
+    "description": "",
+    "updated_at": "2017-06-05T14:53:06.000+00:00",
+    "created_at": "2016-12-17T16:22:42.000+00:00",
+    "status": 0,
+    "image": {
+      "path": "https://d3cnky5llnzyoo.cloudfront.net/graphs/missing.png",
+      "url": "https://graphcommons.comhttps://d3cnky5llnzyoo.cloudfront.net/graphs/missing.png",
+      "ref_name": "",
+      "ref_url": ""
+    },
+    "license": {
+      "type": "cc",
+      "cc_by": true,
+      "cc_sa": true,
+      "cc_nd": false,
+      "cc_nc": false,
+      "name": "Creative Commons Attribution-ShareAlike 4.0 International"
+    },
+    "nodes": [
+      {
+        "id": "dd542dd3-6fc1-e9f9-4087-774e59a8b803",
+        "url": "https://graphcommons.com/nodes/dd542dd3-6fc1-e9f9-4087-774e59a8b803",
+        "type": "Person",
+        "type_id": "4dff8dcb-1e13-4254-0bc5-f0601403d3f5",
+        "name": "test2",
+        "description": "",
+        "image": "",
+        "reference": "",
+        "properties": {},
+        "pos_x": 610.0,
+        "pos_y": 172.0
+      },
+      {
+        "id": "b0a9bf57-ea85-ce91-caa4-19bc875b38ca",
+        "url": "https://graphcommons.com/nodes/b0a9bf57-ea85-ce91-caa4-19bc875b38ca",
+        "type": "Person",
+        "type_id": "4dff8dcb-1e13-4254-0bc5-f0601403d3f5",
+        "name": "test",
+        "description": "",
+        "image": "",
+        "reference": "",
+        "properties": {},
+        "pos_x": 501.10424113243823,
+        "pos_y": 304.5115569578609,
+        "is_locked": false
+      }
+    ],
+    "edges": [
+      {
+        "from": "b0a9bf57-ea85-ce91-caa4-19bc875b38ca",
+        "to": "dd542dd3-6fc1-e9f9-4087-774e59a8b803",
+        "name": "AFFILIATED",
+        "type_id": "7cbd371c-b093-401e-9f58-5231f9d3c575",
+        "id": "808303a7-b0fd-7ce2-f2dd-9bbe9310a164",
+        "user_id": "df5a7dbe-72a9-4b41-80c4-d02b1f1bf255",
+        "weight": 1,
+        "directed": 0,
+        "properties": {}
+      }
+    ],
+    "nodeTypes": [
+      {
+        "id": "4dff8dcb-1e13-4254-0bc5-f0601403d3f5",
+        "name": "Person",
+        "name_alias": null,
+        "description": null,
+        "image": null,
+        "image_as_icon": true,
+        "display_name": null,
+        "color": "#2ca02c",
+        "properties": [
+          {
+            "name": "City",
+            "name_alias": "City"
+          },
+          {
+            "name": "Year",
+            "name_alias": "Year"
+          }
+        ],
+        "hide_name": null,
+        "size": "metric_degree",
+        "size_limit": 48
+      }
+    ],
+    "edgeTypes": [
+      {
+        "id": "7cbd371c-b093-401e-9f58-5231f9d3c575",
+        "name": "AFFILIATED",
+        "name_alias": null,
+        "description": null,
+        "weighted": 1,
+        "directed": 1,
+        "durational": null,
+        "color": "#9467bd",
+        "properties": []
+      },
+      {
+        "id": "d99a50aa-4d26-2152-75d3-151f85a8c895",
+        "name": "COLLBOTES",
+        "name_alias": null,
+        "description": null,
+        "weighted": 1,
+        "directed": 0,
+        "durational": null,
+        "color": "#e377c2",
+        "properties": []
+      }
+    ]
+  }
+}
