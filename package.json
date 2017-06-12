@@ -6,9 +6,12 @@
   "dependencies": {
     "unirest": "^0.4.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "^4.0.1",
+    "mocha": "^3.4.2"
+  },
   "scripts": {
-    "test": "node test.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
